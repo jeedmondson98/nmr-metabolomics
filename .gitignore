@@ -205,3 +205,25 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# macOS
+.DS_Store
+
+# Bioinformatics data - never commit
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.vcf
+*.bcf
+*.bed
+*.gtf
+*.gff
+*.fa
+*.fasta
+
+# Large data directories
+raw_data/
+data/
