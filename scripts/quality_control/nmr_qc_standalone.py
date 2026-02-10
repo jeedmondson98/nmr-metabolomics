@@ -7,18 +7,18 @@ import os
 from datetime import datetime
 
 # === FIXED INPUT PATHS ===
-predicted_txt = "/Users/jackedmondson/Library/CloudStorage/OneDrive-LiverpoolJohnMooresUniversity/PhD/Projects/PRTrm/Standards/python_script_QC_test/Predictions/lactate.tsv"
-sample_csv = "/Users/jackedmondson/Library/CloudStorage/OneDrive-LiverpoolJohnMooresUniversity/PhD/Projects/PRTrm/Standards/python_script_QC_test/topspin/sample_lactate.csv"
+predicted_txt = "./Predictions/lactate.tsv"
+sample_csv = "./topspin/sample_lactate.csv"
 base_name = os.path.splitext(os.path.basename(predicted_txt))[0]
 
 # === OUTPUT FOLDERS ===
-plot_folder = f"/Users/jackedmondson/Library/CloudStorage/OneDrive-LiverpoolJohnMooresUniversity/PhD/Projects/PRTrm/Standards/python_script_QC_test/QC_spectra/{base_name}"
-report_folder = f"/Users/jackedmondson/Library/CloudStorage/OneDrive-LiverpoolJohnMooresUniversity/PhD/Projects/PRTrm/Standards/python_script_QC_test/QC_reports/{base_name}"
+plot_folder = f"./QC_spectra/{base_name}"
+report_folder = f"./QC_reports/{base_name}"
 os.makedirs(plot_folder, exist_ok=True)
 os.makedirs(report_folder, exist_ok=True)
 
 # === OUTPUT FILE PATHS ===
-output_cleaned_txt = f"/Users/jackedmondson/Library/CloudStorage/OneDrive-LiverpoolJohnMooresUniversity/PhD/Projects/PRTrm/Standards/python_script_QC_test/predictions/{base_name}_cleaned.txt"
+output_cleaned_txt = f"./predictions/{base_name}_cleaned.txt"
 output_plot = os.path.join(plot_folder, "sample_vs_predicted_QC_plot.png")
 output_qc_report = os.path.join(report_folder, f"qc_report_{base_name}.txt")
 
